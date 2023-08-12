@@ -11,9 +11,9 @@ public class SwagLabsStepdefs {
 
     SwagLabsSteps swagLabsSteps = new SwagLabsSteps();
 
-    @Dado("que ingreso a SwagLabs")
-    public void queingresoaSwagLabs() throws InterruptedException {
-        swagLabsSteps.openPage("https://www.saucedemo.com/");
+    @Dado("que ingreso a la SIMPWEB de CajaArequipa")
+    public void queIngresoSimpWebCajaArequipa() throws InterruptedException {
+        swagLabsSteps.openPage("http://localhost:8080/SIMP_war_exploded/");
         TimeUnit.SECONDS.sleep(3);
 
     }
@@ -24,9 +24,11 @@ public class SwagLabsStepdefs {
 
     }
 
+
     @Y("ingreso mi contrasena")
     public void ingresomicontrasena() {
         swagLabsSteps.getIngresoCasillaContrasena();
+
 
     }
 
@@ -35,91 +37,44 @@ public class SwagLabsStepdefs {
         swagLabsSteps.BotonLogin();
 
     }
-    @Y("agrego la casaca gris")
-    public void agregolacasacagrisalcarrito(){
-        swagLabsSteps.seleccionolacasacagris();
-        swagLabsSteps.agregoalCarritolacasacagris();
-        swagLabsSteps.regresoalapaginaprincipal();
 
-    }
-    @Y("agrego la mochila negra")
-    public void agregolamochilanegra (){
-        swagLabsSteps.seleccionolamochilanegra();
-        swagLabsSteps.agregoalCarritolamochilanegras();
-        swagLabsSteps.regresoalapaginaprincipalMochila();
-
+    //DAR CLICK EN MANTENIMIENTO
+    @Y("quiero ir al apartado de Consultas")
+    public void doyClickEnConsulta() {
+        swagLabsSteps.seleccionoConsulta();
 
     }
 
-    @Y("agrego el accesorio para bicicleta")
-    public void agregoelaccesorioparabicicleta (){
-        swagLabsSteps.seleccionoaccesoriobicicleta();
-        swagLabsSteps.agregoalCarritobicicleta();
-        swagLabsSteps.regresoalapaginaabicicleta();
+    //CLICK CONSULTA
+    @Y("quiero ir al apartado de Movimientos")
+    public void doyClickMovimientos() {
+        swagLabsSteps.seleccionoMovimientos();
+
+    }
+
+    @Y("quiero ir al apartado de Asientos Contables")
+    public void doyClickAC() {
+        swagLabsSteps.seleccionoAC();
 
 
     }
 
-    @Y("selecciono en el icono del carrito")
-    public void IconoDelCarrito (){
-        swagLabsSteps.seleccionoIconoDelCarrito();
+  @Y("Exporto o no se encuentra archivo vacio")
+    public void exportoDoc() {
+        swagLabsSteps.seleccionoD();
 
     }
 
-    @Y("regreso para comprar otro producto")
-    public void ComprarOtroProdcuto (){
-        swagLabsSteps.seleccionoContinuarComprando();
-
-
-    }
-
-    @Y("agrego polo rojo")
-    public void AgregarPoloRojo (){
-        swagLabsSteps.seleccionoPoloRojo();
-        swagLabsSteps.agregoalCarritoPoloRojo();
-        swagLabsSteps.regresoDespuesPoloRojo();
+    @Y("elijo la fecha de transaccion")
+    public void elijoFecha() {
+        swagLabsSteps.seleccionoF();
 
     }
-
-    @Y("selecciono de nuevo el icono del carrito")
-    public void seleccionodenuevoeliconodelcarrito(){
-        swagLabsSteps.SeleccIconoCarrito();
-
-
-
+    @Y("selecciono ultimo mes")
+    public void seleccionoUlt() {
+        swagLabsSteps.seleccionoultimo();
 
     }
-    @Y("selecciono boton de checkout")
-    public void seleccionobotondecheckout(){
-        swagLabsSteps.SeleccBotonCheckout();
-    }
-
-    @Y("ingreso mi informacion")
-
-    public void agregoarInfoCheckout() {
-        swagLabsSteps.IngresoFirstName();
-        swagLabsSteps.IngresoLastName();
-        swagLabsSteps.IngresoPostalCode();
-
-
-
-    }
-    @Y("selecciono boton de continuar")
-    public void seleccionobotondecontinuar(){
-        swagLabsSteps.SeleccBotondecontinuar();
-
-
-    }
-    @Y("finalizo la compra exitosamente")
-    public void finalizolacompraexitosamente(){
-        swagLabsSteps.FinalizarCompra();
-
-
-    }
-
-
-
-
 
 
 

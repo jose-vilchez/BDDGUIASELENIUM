@@ -24,6 +24,8 @@ public class SwagLabsSteps {
 
     }
 
+    // INGRESO DE USUARIO Y CONTRASEÑA
+
     public void seleccionarcasillanombre() {
         LabsPage().getIngresocasillanombre().click();
 
@@ -33,7 +35,7 @@ public class SwagLabsSteps {
             System.out.println(e.getMessage());
         }
         //INGREESO DE NOMBRE
-        LabsPage().getInputName().sendKeys("performance_glitch_user");
+        LabsPage().getInputName().sendKeys("ADMIN");
 
 
     }
@@ -49,10 +51,14 @@ public class SwagLabsSteps {
             System.out.println(e.getMessage());
         }
         //INGRESO DE CONTRASEÑA
-        LabsPage().getInputContrasena().sendKeys("secret_sauce");
+        LabsPage().getInputContrasena().sendKeys("SIMP");
 
 
     }
+
+
+    // CLICK EN BOTON LOGIN
+
 
     public void BotonLogin() {
         LabsPage().getBotonEntrar().click();
@@ -64,8 +70,23 @@ public class SwagLabsSteps {
     }
 
 
-    public void seleccionolacasacagris() {
-        LabsPage().getitemcasacagris().click();
+    // SELECCIONO ITEM MANTENIMIENTO
+    //seleccionomantenimientos
+    public void seleccionoConsulta() {
+        LabsPage().obteneritemConsulta().click();
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
+    //movimientos
+
+    public void seleccionoMovimientos() {
+        LabsPage().obtenerMovimientos().click();
 
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -76,8 +97,8 @@ public class SwagLabsSteps {
 
     }
 
-    public void agregoalCarritolacasacagris() {
-        LabsPage().getBotonparaagregarAlCarrito().click();
+    public void seleccionoAC() {
+        LabsPage().obtenerAC().click();
 
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -88,19 +109,8 @@ public class SwagLabsSteps {
 
     }
 
-    public void regresoalapaginaprincipal() {
-        LabsPage().getBotonRegresarPaginaPrincipal().click();
-
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }
-
-    public void seleccionolamochilanegra() {
-        LabsPage().getitemmochilanegra().click();
+    public void seleccionoD() {
+        LabsPage().obtenerD().click();
 
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -111,8 +121,8 @@ public class SwagLabsSteps {
 
     }
 
-    public void agregoalCarritolamochilanegras() {
-        LabsPage().getBotonparaagregarMochilaAlCarrito().click();
+    public void seleccionoF() {
+        LabsPage().obtenerF().click();
 
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -123,194 +133,24 @@ public class SwagLabsSteps {
 
     }
 
-    public void regresoalapaginaprincipalMochila() {
-        LabsPage().getBotonRegresarPaginaPrincipalMochila().click();
-
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }
-
-    public void seleccionoaccesoriobicicleta() {
-        LabsPage().getitemparabicicleta().click();
-
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
 
 
-    }
+        public void seleccionoultimo() {
+            LabsPage().obtenerU().click();
 
-    public void agregoalCarritobicicleta() {
-        LabsPage().getAgregoAccbicicleta().click();
-
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                System.out.println(e.getMessage());
+            }
 
 
-    }
-
-    public void regresoalapaginaabicicleta() {
-        LabsPage().getBotonRegresarBicicleta().click();
-
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
-
-    }
-
-    public void seleccionoIconoDelCarrito(){
-        LabsPage().getIngresoAlcarrito().click();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
-
-    }
-
-    public void seleccionoContinuarComprando(){
-        LabsPage().getContinuarComprando().click();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
-
-
-
-    }
-
-    public void seleccionoPoloRojo(){
-        LabsPage().getPoloRojo().click();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
-
-    }
-
-    public void agregoalCarritoPoloRojo(){
-        LabsPage().getAgregoPoloR().click();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
-
-
-    }
-    public void regresoDespuesPoloRojo(){
-        LabsPage().getBotonRegresarPoloR().click();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
-
-
-    }
-    public void SeleccIconoCarrito(){
-        LabsPage().getIngresoIconoCar().click();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
-
-    }
-    public void SeleccBotonCheckout(){
-        LabsPage().getBtnCheckout().click();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public void IngresoFirstName() {
-        LabsPage().getFirstName().click();
-
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
-        //INGREESO DE NOMBRE
-        LabsPage().getInputFirstName().sendKeys("JOSE");
-
-
-    }
-    public void IngresoLastName() {
-        LabsPage().getLastName().click();
-
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
-        //INGREESO DE NOMBRE
-        LabsPage().getInputLastName().sendKeys("VILCHEZ");
-
-
-    }
-
-    public void IngresoPostalCode() {
-        LabsPage().getPostalCode().click();
-
-        try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
-        //INGREESO DE NOMBRE
-        LabsPage().getInputPostalCode().sendKeys("14000");
-
-
-    }
-
-    public void SeleccBotondecontinuar(){
-        LabsPage().SeleccContinuar().click();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
         }
     }
 
 
-    public void FinalizarCompra(){
-        LabsPage().SeleccFinalizarCompra().click();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        }
-        catch(InterruptedException e){
-            System.out.println(e.getMessage());
-        }
-    }
 
-    }
+
 
 
 
